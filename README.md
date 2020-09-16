@@ -127,3 +127,9 @@ this api gets the item_id corresponding to the product_id. With the aim of putti
         `200 (OK)` | {"response": item_id}
         `500 (Not product_id exist)` | error - 5 min loop empty result
 
+## API design Postman
+
+You can import Api design on Postman with delfometrics-api-production.postman_collection.json file: 
+
+1. Now open Postman and click Import.
+2. Select the JSON file. Once the selection is complete, you can see that the JSON file gets imported as a Postman collection in the application.

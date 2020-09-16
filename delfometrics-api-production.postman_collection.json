@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "c2384449-0b03-44fa-b8e0-ac815b8cd992",
+		"name": "delfometrics-api-production",
+		"description": "this is a collection of apis working on production on delfometrics forming the back-end of the app.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get one-item-features",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://one-item-features.azurewebsites.net/www/test?item_id=MLM647635498",
+					"protocol": "https",
+					"host": [
+						"one-item-features",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"www",
+						"test"
+					],
+					"query": [
+						{
+							"key": "item_id",
+							"value": "MLM647635498"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one-item-features (not item_id exist)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://one-item-features.azurewebsites.net/www/test?item_id=221424",
+					"protocol": "https",
+					"host": [
+						"one-item-features",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"www",
+						"test"
+					],
+					"query": [
+						{
+							"key": "item_id",
+							"value": "221424"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post item_per_day_sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://prod-20.centralus.logic.azure.com:443/workflows/bcec4a46a2d64d109c1d8a83d0b7791b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg",
+					"protocol": "https",
+					"host": [
+						"prod-20",
+						"centralus",
+						"logic",
+						"azure",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"workflows",
+						"bcec4a46a2d64d109c1d8a83d0b7791b",
+						"triggers",
+						"manual",
+						"paths",
+						"invoke"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2016-10-01"
+						},
+						{
+							"key": "sp",
+							"value": "%2Ftriggers%2Fmanual%2Frun"
+						},
+						{
+							"key": "sv",
+							"value": "1.0"
+						},
+						{
+							"key": "sig",
+							"value": "leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500 (Invalid format) - post item_per_day_sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://prod-20.centralus.logic.azure.com:443/workflows/bcec4a46a2d64d109c1d8a83d0b7791b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg",
+					"protocol": "https",
+					"host": [
+						"prod-20",
+						"centralus",
+						"logic",
+						"azure",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"workflows",
+						"bcec4a46a2d64d109c1d8a83d0b7791b",
+						"triggers",
+						"manual",
+						"paths",
+						"invoke"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2016-10-01"
+						},
+						{
+							"key": "sp",
+							"value": "%2Ftriggers%2Fmanual%2Frun"
+						},
+						{
+							"key": "sv",
+							"value": "1.0"
+						},
+						{
+							"key": "sig",
+							"value": "leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500 (not category_id in db) - post item_per_day_sell Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"title\": \"Motosierra Gasolina Leñera  52 Cc Barra De 20  Hkm5220 Husky\",\r\n      \"site_id\": \"MLM\",\r\n      \"price\": 1408,\r\n      \"reputation_vendor\": 5,\r\n      \"vendor_sales_completed\": 1261540,\r\n      \"logistic_type\": \"fulfillment\",\r\n      \"free_shipping\": \"true\",\r\n      \"ranking\": 1,\r\n      \"conversion\": 0.0008250988468418517,\r\n      \"condition\": \"new\",\r\n      \"catalog_product\": \"true\",\r\n      \"video\": \"false\",\r\n      \"accepts_mercadopago\": \"true\",\r\n      \"tags\": \"brand_verified good_quality_picture good_quality_thumbnail immediate_payment cart_eligible\",\r\n      \"num_pictures\": 5,\r\n      \"attributes\": \"SWORD_LENGTH_20_\\\" BRAND_Husky CUTTING_DIAMETER_560_mm ENGINE_DISPLACEMENT_52_cc FUEL_TYPES_Nafta GTIN_7503025059068 ITEM_CONDITION_Nuevo MODEL_HKM5220 PACKAGE_HEIGHT_30_cm PACKAGE_LENGTH_45_cm PACKAGE_WEIGHT_5500_g PACKAGE_WIDTH_10_cm POWER_2.5_hp RECOMMENDED_USES_Jardinería SELLER_SKU_7503025059068 TANK_CAPACITY_550_mL WEIGHT_7.5_kg\",\r\n      \"reviews_average\": 4.2,\r\n      \"reviews_total\": 88,\r\n      \"official_store\": \"false\",\r\n      \"deal_ids\": \"true\",\r\n      \"warranty\": \"true\",\r\n      \"listing_type_id\": \"gold_special\"\r\n    }\r\n  ],\r\n  \"category_id\": \"MLM111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://prod-20.centralus.logic.azure.com:443/workflows/bcec4a46a2d64d109c1d8a83d0b7791b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg",
+					"protocol": "https",
+					"host": [
+						"prod-20",
+						"centralus",
+						"logic",
+						"azure",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"workflows",
+						"bcec4a46a2d64d109c1d8a83d0b7791b",
+						"triggers",
+						"manual",
+						"paths",
+						"invoke"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2016-10-01"
+						},
+						{
+							"key": "sp",
+							"value": "%2Ftriggers%2Fmanual%2Frun"
+						},
+						{
+							"key": "sv",
+							"value": "1.0"
+						},
+						{
+							"key": "sig",
+							"value": "leNB3U_CW5gc2be7GRIfH27VgZnPqQ_MCUKBbyca1Mg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get item_per_day_weight",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://productionalpha.azurewebsites.net/api/day_visits_weight?code=ZH7nZn8a4MoC5CrafyAdLZkniR35nkmq2hNo2wsY8456dxdxFygJbQ==&category_id=",
+					"protocol": "https",
+					"host": [
+						"productionalpha",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"day_visits_weight"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "ZH7nZn8a4MoC5CrafyAdLZkniR35nkmq2hNo2wsY8456dxdxFygJbQ=="
+						},
+						{
+							"key": "category_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get item_per_day_weight (not category_id in db)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://productionalpha.azurewebsites.net/api/day_visits_weight?code=ZH7nZn8a4MoC5CrafyAdLZkniR35nkmq2hNo2wsY8456dxdxFygJbQ==&category_id=11111",
+					"protocol": "https",
+					"host": [
+						"productionalpha",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"day_visits_weight"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "ZH7nZn8a4MoC5CrafyAdLZkniR35nkmq2hNo2wsY8456dxdxFygJbQ=="
+						},
+						{
+							"key": "category_id",
+							"value": "11111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one_item_catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500 get one_item_catalog (not product_id exist)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://productionalpha.azurewebsites.net/api/one_item_catalog?code=RXzrvm59PH31jrMaa5KRe0lA/rro4CrMQ385FEQec2Qr1kM1V9mGEQ==&catalog_product=1111",
+					"protocol": "https",
+					"host": [
+						"productionalpha",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"one_item_catalog"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "RXzrvm59PH31jrMaa5KRe0lA/rro4CrMQ385FEQec2Qr1kM1V9mGEQ=="
+						},
+						{
+							"key": "catalog_product",
+							"value": "1111"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
