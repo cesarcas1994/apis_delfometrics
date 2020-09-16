@@ -41,34 +41,34 @@ connect to machine_learning production algoritms obtein item_per_day_sells predi
     - Body
         ```json
         {
-  "items": [
-    {
-      "title": "Motosierra Gasolina Leñera  52 Cc Barra De 20  Hkm5220 Husky",
-      "site_id": "MLM",
-      "price": 1408,
-      "reputation_vendor": 5,
-      "vendor_sales_completed": 1261540,
-      "logistic_type": "fulfillment",
-      "free_shipping": "true",
-      "ranking": 1,
-      "conversion": 0.0008250988468418517,
-      "condition": "new",
-      "catalog_product": "true",
-      "video": "false",
-      "accepts_mercadopago": "true",
-      "tags": "brand_verified good_quality_picture good_quality_thumbnail immediate_payment cart_eligible",
-      "num_pictures": 5,
-      "attributes": "SWORD_LENGTH_20_\" BRAND_Husky CUTTING_DIAMETER_560_mm ENGINE_DISPLACEMENT_52_cc FUEL_TYPES_Nafta GTIN_7503025059068 ITEM_CONDITION_Nuevo MODEL_HKM5220 PACKAGE_HEIGHT_30_cm PACKAGE_LENGTH_45_cm PACKAGE_WEIGHT_5500_g PACKAGE_WIDTH_10_cm POWER_2.5_hp RECOMMENDED_USES_Jardinería SELLER_SKU_7503025059068 TANK_CAPACITY_550_mL WEIGHT_7.5_kg",
-      "reviews_average": 4.2,
-      "reviews_total": 88,
-      "official_store": "false",
-      "deal_ids": "true",
-      "warranty": "true",
-      "listing_type_id": "gold_special"
-    }
-  ],
-  "category_id": "MLM158032"
-}
+            "items": [
+            {
+                "title": "Motosierra Gasolina Leñera  52 Cc Barra De 20  Hkm5220 Husky",
+                  "site_id": "MLM",
+                  "price": 1408,
+                  "reputation_vendor": 5,
+                  "vendor_sales_completed": 1261540,
+                  "logistic_type": "fulfillment",
+                  "free_shipping": "true",
+                  "ranking": 1,
+                  "conversion": 0.0008250988468418517,
+                  "condition": "new",
+                  "catalog_product": "true",
+                  "video": "false",
+                  "accepts_mercadopago": "true",
+                  "tags": "brand_verified good_quality_picture good_quality_thumbnail immediate_payment cart_eligible",
+                  "num_pictures": 5,
+                  "attributes": "SWORD_LENGTH_20_\" BRAND_Husky CUTTING_DIAMETER_560_mm ENGINE_DISPLACEMENT_52_cc FUEL_TYPES_Nafta GTIN_7503025059068 ITEM_CONDITION_Nuevo MODEL_HKM5220 PACKAGE_HEIGHT_30_cm PACKAGE_LENGTH_45_cm PACKAGE_WEIGHT_5500_g PACKAGE_WIDTH_10_cm POWER_2.5_hp RECOMMENDED_USES_Jardinería SELLER_SKU_7503025059068 TANK_CAPACITY_550_mL WEIGHT_7.5_kg",
+                  "reviews_average": 4.2,
+                  "reviews_total": 88,
+                  "official_store": "false",
+                  "deal_ids": "true",
+                  "warranty": "true",
+                  "listing_type_id": "gold_special"
+                }
+            ],
+            "category_id": "MLM158032"
+        }
         ```
     - Possible returns
 
