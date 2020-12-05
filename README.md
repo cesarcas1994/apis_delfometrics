@@ -75,8 +75,8 @@ connect to machine_learning production algoritms obtein item_per_day_sells predi
         Code | Answer
         ------------ | -------------
         `200 (OK)` | {} 
-        `500 (Invalid format)` | `"respuesta-error":`
-        `500 (Not category_id in DB)` | `"respuesta-error": "No se encuentra esa categoria en base de datos, posteriormente la adicionaremos en la base de datos"`
+        `400 (Invalid format)` | `"error":`
+        `404 (Not category_id in DB)` | `"error": "No se encuentra esa categoria en base de datos, posteriormente la adicionaremos en la base de datos"`
         
 ### item_per_day_weight
 
