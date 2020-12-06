@@ -117,7 +117,6 @@ this api gets the item_id corresponding to the product_id. With the aim of putti
     - Request
         ```bash
         GET https://productionalpha.azurewebsites.net/api/one_item_catalog?code=RXzrvm59PH31jrMaa5KRe0lA/rro4CrMQ385FEQec2Qr1kM1V9mGEQ==&catalog_product=:product_id 
-        example -> https://productionalpha.azurewebsites.net/api/one_item_catalog?code=RXzrvm59PH31jrMaa5KRe0lA/rro4CrMQ385FEQec2Qr1kM1V9mGEQ==&catalog_product=MLM14186128
         ```
     
     - Possible returns
@@ -126,6 +125,80 @@ this api gets the item_id corresponding to the product_id. With the aim of putti
         ------------ | -------------
         `200 (OK)` | {"response": item_id}
         `500 (Not product_id exist)` | error - 5 min loop empty result
+
+### time_category_training
+
+Returns the approximate enter time for a category, this calculation is based on multiplying the number of items in the category by a value of how long it takes for items taken as a training average in previous categories
+
+#### API design readme
+
+1. Read time_category_training
+
+    This route gets a string corresponding to the time in seconds.
+    - Request
+        ```bash
+        POST https://mlconexionmeli.azurewebsites.net/api/time_category_training
+        ```
+    - Body
+        ```json
+        {
+            "category_id": "MLM2354"
+        }
+        ```
+    - Possible returns
+
+        Code | Answer
+        ------------ | -------------
+        `200 (OK)` | {time_inseconds_string}
+        `500 (error)` | error - 5 min loop empty result
+        
+## ml_training
+
+### dinamic-ml-categories-training
+
+Tiene de entrada un category_id de mercadolibre (actualmente de mexico solamente es permitido) esta se encarga de entrenarla como final se tendra en blob storage un:
+
+1 - {category_id}.training
+2 - {category_id}.csv
+3 - {category_id}_evaluate_model.csv
+
+#### API design readme
+
+1. Read dinamic-ml-categories-training
+
+    This route gets a json corresponding to the commitId with the order of training (return a anwser without finish the entire process, only to show that it start).
+    - Request
+        ```bash
+        POST https://prod-09.centralus.logic.azure.com:443/workflows/bb8b6cd07e8b4f2ebf6e436d8baee782/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=6KiSJiRLYathVAJYJHv_zdv_Ckin2QXaSKL4Qp2lXTk
+        ```
+    - Body
+        ```json
+        {
+            "input_category_id": "mlm194037"
+        }
+        ```
+    - Possible returns
+
+        Code | Answer
+        ------------ | -------------
+        `200 (OK)` | {"commitId": commitId}
+        `500 (error)` | error - 5 min loop empty result
+
+#### arquitecture
+
+TODO
+
+### dinamic-day-weight-training
+
+TODO
+
+#### API design readme
+
+TODO
+
+#### arquitecture
+
+TODO
 
 ## API design Postman
 
