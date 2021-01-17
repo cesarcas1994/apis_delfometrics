@@ -156,11 +156,7 @@ Returns the approximate enter time for a category, this calculation is based on 
 
 ### dinamic-ml-categories-training
 
-Tiene de entrada un category_id de mercadolibre (actualmente de mexico solamente es permitido) esta se encarga de entrenarla como final se tendra en blob storage un:
-
-1 - {category_id}.training
-2 - {category_id}.csv
-3 - {category_id}_evaluate_model.csv
+Tiene de entrada un category_id de mercadolibre (actualmente de mexico solamente es permitido) esta se encarga de entrenarlo y tener disponible los datos para que esta categoría pueda ser usada en producción:
 
 #### API design readme
 
@@ -181,24 +177,8 @@ Tiene de entrada un category_id de mercadolibre (actualmente de mexico solamente
 
         Code | Answer
         ------------ | -------------
-        `200 (OK)` | {"commitId": commitId}
+        `200 (OK)` | {"category_id": category_id, "time_to_train": time_to_train_seconds}
         `500 (error)` | error - 5 min loop empty result
-
-#### arquitecture
-
-TODO
-
-### dinamic-day-weight-training
-
-TODO
-
-#### API design readme
-
-TODO
-
-#### arquitecture
-
-TODO
 
 ## API design Postman
 
