@@ -156,7 +156,7 @@ Returns the approximate enter time for a category, this calculation is based on 
 
 ### dinamic-ml-categories-training
 
-Tiene de entrada un category_id de mercadolibre (actualmente de mexico solamente es permitido) esta se encarga de entrenarlo y tener disponible los datos para que esta categoría pueda ser usada en producción:
+To start with, it has a category_id from mercadolibre (currently from Mexico it is only allowed) this is in charge of training it and having the data available so that this category can be used in production:
 
 #### API design readme
 
